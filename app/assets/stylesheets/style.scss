@@ -130,11 +130,14 @@ header.header {
   div.header__bar.row {
     position: relative;
     h1.grid-6 {
-      font-size: 20px;
+      font-size: 21px;
       line-height: 41px;
       float: left;
       a {
-        display: block;
+        display: inline;
+      }
+      span {
+          font-size: 12px;
       }
     }
     div.grid-6 {
@@ -157,8 +160,8 @@ header.header {
       top: 5px;
       display: block;
       float: left;
-      margin-left: 30px;
-      width: 150px;
+      margin-left: 10px;
+      width: 170px;
       height: 50px;
       font-size: 1em;
       cursor: pointer;
