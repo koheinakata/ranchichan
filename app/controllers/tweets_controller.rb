@@ -3,7 +3,9 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @tweets = Tweet.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @todaytweets = Tweet.where("created_at between '#{Date.today} 0:00:00' and '#{Date.today} 23:59:59'").includes(:user).page(params[:page]).per(10).order("created_at DESC")
+    # @tweets = Tweet.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @tweets = Tweet.where("created_at between '2015-01-01 0:00:00' and '#{Date.today} 0:00:00'").includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def show

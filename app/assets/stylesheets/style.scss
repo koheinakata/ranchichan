@@ -108,6 +108,14 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
 }
 
+div {
+  changeday {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
 .title--big {
   font-size: 1.5em;
   font-weight: bold;
@@ -373,6 +381,19 @@ form {
   }
 }
 
+.changeday {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.opa{
+  -webkit-filter: opacity(0.6);
+  -moz-filter: opacity(0.6);
+  -o-filter: opacity(0.6);
+  -ms-filter: opacity(0.6);
+  filter: opacity(0.6);
+}
 footer {
   @include boxBase;
   color: $gray;
