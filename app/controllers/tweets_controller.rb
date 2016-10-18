@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(image: tweet_params[:image], text: tweet_params[:text], folderimage: tweet_params[:folderimage], user_id: current_user.id)
+    Tweet.create(image: tweet_params[:image], text: tweet_params[:text], folderimage: tweet_params[:folderimage], heart: tweet_params[:heart] ,user_id: current_user.id)
   end
 
   def destroy
@@ -41,15 +41,20 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:image, :text, :folderimage)
+    params.require(:tweet).permit(:image, :text, :folderimage, :heart)
   end
 
   private
   def edit_params
-    params.permit(:image, :text, :folderimage)
+    params.permit(:image, :text, :folderimage, :heart)
   end
 
   def move_to_index
     redirect_to :action => "index" unless user_signed_in?
   end
+
+  # def heartmake
+  #   Tweet.create(heart: current_user.id)
+  #   redirect_to :action => "create"
+  # end
 end

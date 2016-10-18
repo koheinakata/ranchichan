@@ -22,7 +22,6 @@
       <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post) do %>
         <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
         <input type="submit" value="SENT">
-        <%= image_submit_tag("heart.gif", data: { confirm: "Are you sure?" }, class: "heart") %>
       <% end %>
     <% end %>
     <div class="comments">

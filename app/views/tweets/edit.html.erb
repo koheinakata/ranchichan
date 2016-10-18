@@ -4,8 +4,10 @@
       編集する
     </h3>
     <!-- <input placeholder="Image Url" type="text" name="image" value="<%= @tweet.image %>" autofocus="true"> -->
-    <textarea cols="30" name="text" placeholder="text" rows="10"><%= @tweet.text %></textarea>
+    <textarea cols="30" name="text" placeholder="text" rows="4"><%= @tweet.text %></textarea>
     <input type="submit" value="SENT">
+    <textarea cols="30" name="heart" placeholder="コメントする" rows="1">matching!!</textarea>
+    <%= image_submit_tag("heart.gif", data: { confirm: "マッチングOK?" }, class: "heart") %>
   <% end %>
 </div>
 
