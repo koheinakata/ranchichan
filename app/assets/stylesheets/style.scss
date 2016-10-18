@@ -100,7 +100,6 @@ a {
     color: lighten($accent, 15%);
   }
 }
-
 h1,h2,h3,h4,h5,h6 {
 }
 
@@ -390,6 +389,7 @@ form {
 
 .changeday {
   font-size: 20px;
+  padding-top: 20px;
   font-weight: bold;
   text-align: center;
 }

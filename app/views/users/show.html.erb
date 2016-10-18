@@ -13,6 +13,6 @@
   <% @comments.each do |comment| %>
     <li>
     <%= comment.text %>
-     <%= link_to "   →相手ページへ", "/tweets/#{comment.tweet_id}", method: :get %>
+     <%= link_to "   →Talk Page", "/tweets/#{comment.tweet_id}", method: :get %>
   <% end %>
 </div>
