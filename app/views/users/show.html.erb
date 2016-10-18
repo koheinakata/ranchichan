@@ -6,11 +6,13 @@
   <%= paginate(@tweets) %>
 </div>
 
-<!-- <hr>
+<hr>
 
 <div class="contents row">
   <p><%= @nickname %>さんの投稿一覧</p>
-    <% @comments.each do |comment| %>
+  <% @comments.each do |comment| %>
+    <li>
     <%= comment.text %>
+     <%= link_to "   →相手ページへ", "/tweets/#{comment.tweet_id}", method: :get %>
   <% end %>
-</div> -->
+</div>
