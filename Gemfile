@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '0.3.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,6 +45,7 @@ end
 
 gem 'carrierwave'
 gem 'fog'
+<<<<<<< HEAD
 gem 'pry-rails'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
@@ -54,3 +55,9 @@ gem 'devise'
 group :production, :staging do
   gem 'rails_12factor'
 end
+=======
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
+>>>>>>> c7e58b369bdfadd71d099d7b7846839ab116873a
